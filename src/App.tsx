@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      <h1>Counter: {count}</h1>
+      <h1>React Counter - Jenkins CI/CD: {count}</h1>
 
       <button onClick={() => setCount(count + 1)}>
         +
