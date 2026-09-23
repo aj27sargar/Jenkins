@@ -3,22 +3,11 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
+        stage('Check Environment') {
             steps {
-                echo 'Code is already checked out by Jenkins'
-            }
-        }
-
-        stage('Build React') {
-            steps {
-                bat 'npm install'
-                bat 'npm run build'
-            }
-        }
-
-        stage('Docker Build') {
-            steps {
-                bat 'docker build -t react-counter .'
+                bat 'node --version'
+                bat 'npm --version'
+                bat 'docker --version'
             }
         }
 
